@@ -1,0 +1,45 @@
+*Transaction Record*
+UserId: 823321
+Currency From: USD
+Currency To: CNY
+Amount Sell: 1030.34
+Amount Buy: 557.16
+Rate: 13.32
+Time Placed: 24-SEP-15 14:07:06
+Originating Country: IE
+*Transaction Record*
+UserId: 123321
+Currency From: USD
+Currency To: HKD
+Amount Sell: 1000.00
+Amount Buy: 777
+Rate: 123.32
+Time Placed: 4-JAN-15 22:17:44
+Originating Country: FR
+*Transaction Record*
+UserId: 723321
+Currency From: EUR
+Currency To: HKD
+Amount Sell: 345.00
+Amount Buy: 247.17
+Rate: 23.32
+Time Placed: 7-FEB-15 10:27:44
+Originating Country: GB
+*Transaction Record*
+UserId: 123321
+Currency From: CHF
+Currency To: GBP
+Amount Sell: 543.00
+Amount Buy: 977.23
+Rate: 12.32
+Time Placed: 13-MAR-15 13:57:44
+Originating Country: IT
+*Transaction Record*
+UserId: 723320
+Currency From: CNY
+Currency To: USD
+Amount Sell: 1001.00
+Amount Buy: 677.32
+Rate: 13.32
+Time Placed: 19-AUG-15 9:27:44
+Originating Country: CN
