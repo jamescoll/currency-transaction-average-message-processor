@@ -1,5 +1,6 @@
 package currencyTransactionConsumer;
 
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -12,20 +13,22 @@ import java.util.Map.Entry;
 
 import messageProcessor.MessageProcessorEngine;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.client.RestTemplate;
 
+@SpringBootApplication
 public class Application {
 
 	private static final String filename = "transactionlog.txt";
-
+	private static MessageProcessorEngine messageProcessor;
 
 	public static void main(String args[]) {
-
 
 		RestTemplate restTemplate = new RestTemplate();
 		ArrayList<CurrencyTransaction> transactions = new ArrayList<>();
 		String urlString = "http://localhost:8080/currencyTransaction";
-		MessageProcessorEngine messageProcessor = new MessageProcessorEngine();
+		messageProcessor = new MessageProcessorEngine();
 
 		for (int i = 1; i < 6; i++) {
 
@@ -43,6 +46,11 @@ public class Application {
 
 		displayStatsFromProcessor(messageProcessor);
 
+		SpringApplication.run(Application.class, args);
+		
+		
+
+		 
 
 	}
 
@@ -176,6 +184,10 @@ public class Application {
 		for(Date date : engine.getTransactionDateList()){
 			System.out.println(date.toString());
 		}
+	}
+	
+	public static MessageProcessorEngine sendMessageProcessor(){
+		return messageProcessor;
 	}
 
 }
